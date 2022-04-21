@@ -27,6 +27,8 @@ function App() {
     })
       .then(res => res.json())
       .then(data => {
+        const newUsers = [...users, data];
+        setUsers(newUsers);
         console.log(data);
       });
   };
